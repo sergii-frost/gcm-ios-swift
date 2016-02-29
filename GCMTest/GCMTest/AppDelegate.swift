@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
     
     let registrationKey = "onRegistrationCompleted"
     let messageKey = "onMessageReceived"
-    let subscriptionTopic = "/topics/global"
+    let subscriptionTopicGlobal = "/topics/global"
+    let subscriptionTopicAIK = "/topics/aik"
+    let subscriptionTopicDIF = "/topics/dif"
     
     // [START register_for_remote_notifications]
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions:
@@ -55,22 +57,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
             return true
     }
     
-    func subscribeToTopic() {
+    func subscribeToTopic(topic: String!) {
         // If the app has a registration token and is connected to GCM, proceed to subscribe to the
         // topic
         if(registrationToken != nil && connectedToGCM) {
-            GCMPubSub.sharedInstance().subscribeWithToken(self.registrationToken, topic: subscriptionTopic,
+            GCMPubSub.sharedInstance().subscribeWithToken(self.registrationToken, topic: topic,
                 options: nil, handler: {(NSError error) -> Void in
                     if (error != nil) {
                         // Treat the "already subscribed" error more gently
                         if error.code == 3001 {
-                            print("Already subscribed to \(self.subscriptionTopic)")
+                            print("Already subscribed to \(topic)")
                         } else {
                             print("Subscription failed: \(error.localizedDescription)");
                         }
                     } else {
                         self.subscribedToTopic = true;
-                        NSLog("Subscribed to \(self.subscriptionTopic)");
+                        NSLog("Subscribed to \(topic)");
+                    }
+            })
+        }
+    }
+    
+    func unsubscribeFromTopic(topic: String!) {
+        // If the app has a registration token and is connected to GCM, proceed to subscribe to the
+        // topic
+        if(registrationToken != nil && connectedToGCM) {
+            GCMPubSub.sharedInstance().unsubscribeWithToken(self.registrationToken, topic: topic,
+                options: nil, handler: {(NSError error) -> Void in
+                    if (error != nil) {
+                        // Treat the "already subscribed" error more gently
+                        if error.code == 3001 {
+                            print("Already unsubscribed from \(topic)")
+                        } else {
+                            print("Unsubscribe failed: \(error.localizedDescription)");
+                        }
+                    } else {
+                        self.subscribedToTopic = true;
+                        NSLog("Unsubscribed from \(topic)");
                     }
             })
         }
@@ -87,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
                 self.connectedToGCM = true
                 print("Connected to GCM")
                 // [START_EXCLUDE]
-                self.subscribeToTopic()
+                self.subscribeToTopic(self.subscriptionTopicAIK)
                 // [END_EXCLUDE]
             }
         })
@@ -164,7 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         if (registrationToken != nil) {
             self.registrationToken = registrationToken
             print("Registration Token: \(registrationToken)")
-            self.subscribeToTopic()
+            self.subscribeToTopic(self.subscriptionTopicAIK)
             let userInfo = ["registrationToken": registrationToken]
             NSNotificationCenter.defaultCenter().postNotificationName(
                 self.registrationKey, object: nil, userInfo: userInfo)
