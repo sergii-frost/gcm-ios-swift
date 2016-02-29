@@ -27,3 +27,5 @@ Authorization:key=AIzaSyAIHGOwTAtPwJdLmK1SCrpzshjmtZvYOoI
 ```
 
 You should be able to get notification like on screenshot below.
+
+![GCMTest screenshot](https://github.com/sergii-frost/gcm-ios-swift/blob/feature/gcm/iphone_push_screenshot.png)
