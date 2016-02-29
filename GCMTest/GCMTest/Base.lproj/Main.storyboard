@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frost logo blue" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-lZ-IUK">
+                                <rect key="frame" x="51" y="40" width="218" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gaB-lZ-IUK" secondAttribute="height" multiplier="128:47" id="1uK-n8-hjn"/>
+                                    <constraint firstAttribute="height" constant="80" id="ZOG-ud-4pE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gaB-lZ-IUK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dbZ-0Q-tJD"/>
+                            <constraint firstItem="gaB-lZ-IUK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdA-tE-ONL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.13333333333333" y="406.59333333333331"/>
+            <point key="canvasLocation" x="616" y="454"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Frost logo blue" width="256" height="94"/>
+    </resources>
 </document>

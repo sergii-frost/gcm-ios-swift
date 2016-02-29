@@ -13,9 +13,12 @@
 		45CC12251C84825F00D5DDD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CC12241C84825F00D5DDD9 /* Assets.xcassets */; };
 		45CC12281C84825F00D5DDD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CC12261C84825F00D5DDD9 /* LaunchScreen.storyboard */; };
 		45CC12321C84879600D5DDD9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 45CC12311C84879600D5DDD9 /* Podfile */; };
+		45CC12341C8489BC00D5DDD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45CC12331C8489BC00D5DDD9 /* GoogleService-Info.plist */; };
+		CBC9C25D0A284BC60CA5DD9A /* Pods_GCMTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1477598E368917CAA53AF804 /* Pods_GCMTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1477598E368917CAA53AF804 /* Pods_GCMTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCMTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CC121A1C84825F00D5DDD9 /* GCMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CC121D1C84825F00D5DDD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CC121F1C84825F00D5DDD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,10 @@
 		45CC12271C84825F00D5DDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45CC12291C84825F00D5DDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45CC12311C84879600D5DDD9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		45CC12331C8489BC00D5DDD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45CC12351C848AC700D5DDD9 /* GCMTest-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCMTest-Bridging.h"; sourceTree = "<group>"; };
+		4BF75F7C43CAC69736AC5A3A /* Pods-GCMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCMTest/Pods-GCMTest.release.xcconfig"; sourceTree = "<group>"; };
+		73B155785BDCB143AE404FBC /* Pods-GCMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCMTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCMTest/Pods-GCMTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC9C25D0A284BC60CA5DD9A /* Pods_GCMTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0411A08B3CCFDBDA2CBCB1EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1477598E368917CAA53AF804 /* Pods_GCMTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45CC12111C84825F00D5DDD9 = {
 			isa = PBXGroup;
 			children = (
 				45CC121C1C84825F00D5DDD9 /* GCMTest */,
 				45CC121B1C84825F00D5DDD9 /* Products */,
+				BCA5541FFAEB290C6C82D288 /* Pods */,
+				0411A08B3CCFDBDA2CBCB1EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +81,19 @@
 				45CC12261C84825F00D5DDD9 /* LaunchScreen.storyboard */,
 				45CC12291C84825F00D5DDD9 /* Info.plist */,
 				45CC12311C84879600D5DDD9 /* Podfile */,
+				45CC12331C8489BC00D5DDD9 /* GoogleService-Info.plist */,
+				45CC12351C848AC700D5DDD9 /* GCMTest-Bridging.h */,
 			);
 			path = GCMTest;
+			sourceTree = "<group>";
+		};
+		BCA5541FFAEB290C6C82D288 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73B155785BDCB143AE404FBC /* Pods-GCMTest.debug.xcconfig */,
+				4BF75F7C43CAC69736AC5A3A /* Pods-GCMTest.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45CC122C1C84825F00D5DDD9 /* Build configuration list for PBXNativeTarget "GCMTest" */;
 			buildPhases = (
+				AB40D971E80CC85E73875568 /* Check Pods Manifest.lock */,
 				45CC12161C84825F00D5DDD9 /* Sources */,
 				45CC12171C84825F00D5DDD9 /* Frameworks */,
 				45CC12181C84825F00D5DDD9 /* Resources */,
+				B650F7AA371D350543914D0E /* Embed Pods Frameworks */,
+				9D7B11030C6110D9114D9533 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,12 +168,61 @@
 			files = (
 				45CC12281C84825F00D5DDD9 /* LaunchScreen.storyboard in Resources */,
 				45CC12251C84825F00D5DDD9 /* Assets.xcassets in Resources */,
+				45CC12341C8489BC00D5DDD9 /* GoogleService-Info.plist in Resources */,
 				45CC12321C84879600D5DDD9 /* Podfile in Resources */,
 				45CC12231C84825F00D5DDD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D7B11030C6110D9114D9533 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GCMTest/Pods-GCMTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB40D971E80CC85E73875568 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B650F7AA371D350543914D0E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GCMTest/Pods-GCMTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45CC12161C84825F00D5DDD9 /* Sources */ = {
@@ -258,6 +339,7 @@
 		};
 		45CC122D1C84825F00D5DDD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73B155785BDCB143AE404FBC /* Pods-GCMTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -267,11 +349,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = se.frostdigital.GCMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCMTest/GCMTest-Bridging.h";
 			};
 			name = Debug;
 		};
 		45CC122E1C84825F00D5DDD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF75F7C43CAC69736AC5A3A /* Pods-GCMTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -281,6 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = se.frostdigital.GCMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCMTest/GCMTest-Bridging.h";
 			};
 			name = Release;
 		};

@@ -3,5 +3,7 @@ use_frameworks!
 
 target 'GCMTest' do
 
+pod 'Google/CloudMessaging', '~> 1.2.0'
+
 end
 
