@@ -110,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
                 self.connectedToGCM = true
                 print("Connected to GCM")
                 // [START_EXCLUDE]
-                self.subscribeToTopic(self.subscriptionTopicAIK)
+//                self.subscribeToTopic(self.subscriptionTopicAIK)
                 // [END_EXCLUDE]
             }
         })

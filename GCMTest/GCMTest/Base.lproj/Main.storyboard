@@ -25,13 +25,49 @@
                                     <constraint firstAttribute="height" constant="80" id="ZOG-ud-4pE"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aik_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2LK-yC-SXt">
+                                <rect key="frame" x="20" y="170" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Nw-jy-gVC"/>
+                                    <constraint firstAttribute="width" secondItem="2LK-yC-SXt" secondAttribute="height" multiplier="1:1" id="jbm-Cj-SXY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dif_logo" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-nu-qx9">
+                                <rect key="frame" x="20" y="240" width="50" height="50"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIU-Di-uvM">
+                                <rect key="frame" x="78" y="179" width="51" height="31"/>
+                                <connections>
+                                    <action selector="aikSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="m11-fW-B2F"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-uf-XIs">
+                                <rect key="frame" x="78" y="249" width="51" height="31"/>
+                                <connections>
+                                    <action selector="difSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lV2-y6-HJd"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YU4-nu-qx9" firstAttribute="height" secondItem="2LK-yC-SXt" secondAttribute="height" id="14U-DW-uSQ"/>
+                            <constraint firstItem="bRY-uf-XIs" firstAttribute="leading" secondItem="TIU-Di-uvM" secondAttribute="leading" id="6ta-Ks-PXN"/>
+                            <constraint firstItem="bRY-uf-XIs" firstAttribute="centerY" secondItem="YU4-nu-qx9" secondAttribute="centerY" id="8Bj-Xd-AcN"/>
+                            <constraint firstItem="2LK-yC-SXt" firstAttribute="top" secondItem="gaB-lZ-IUK" secondAttribute="bottom" constant="50" id="GGK-BM-7Sf"/>
+                            <constraint firstItem="TIU-Di-uvM" firstAttribute="centerY" secondItem="2LK-yC-SXt" secondAttribute="centerY" id="L8M-9k-pit"/>
+                            <constraint firstItem="YU4-nu-qx9" firstAttribute="width" secondItem="2LK-yC-SXt" secondAttribute="width" id="OSJ-lb-vfp"/>
+                            <constraint firstItem="YU4-nu-qx9" firstAttribute="leading" secondItem="2LK-yC-SXt" secondAttribute="leading" id="PdU-ks-BgO"/>
+                            <constraint firstItem="2LK-yC-SXt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="dNW-7X-bcO"/>
                             <constraint firstItem="gaB-lZ-IUK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dbZ-0Q-tJD"/>
+                            <constraint firstItem="TIU-Di-uvM" firstAttribute="leading" secondItem="2LK-yC-SXt" secondAttribute="trailing" constant="8" id="gMt-Dg-GKk"/>
                             <constraint firstItem="gaB-lZ-IUK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdA-tE-ONL"/>
+                            <constraint firstItem="YU4-nu-qx9" firstAttribute="top" secondItem="2LK-yC-SXt" secondAttribute="bottom" constant="20" id="xgK-RV-Eko"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aikSwitch" destination="TIU-Di-uvM" id="48r-LL-siY"/>
+                        <outlet property="difSwitch" destination="bRY-uf-XIs" id="3yQ-k5-4RX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,5 +76,7 @@
     </scenes>
     <resources>
         <image name="Frost logo blue" width="256" height="94"/>
+        <image name="aik_logo" width="321" height="400"/>
+        <image name="dif_logo" width="200" height="233"/>
     </resources>
 </document>
